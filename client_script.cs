@@ -264,7 +264,9 @@ public class client_script : MonoBehaviour {
 
         
 
-        if (packetnr == null)
+        if (packetnr != null)
+            customheaders["X-siak-packetnr"] = packetnr;
+	else
             customheaders["X-siak-packetnr"] = "-2";
 
         if (word != null)
